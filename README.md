@@ -2,10 +2,10 @@
 
 The [`tilkal/multichain`] images come in two flavors.
 
-The **`tilkal/multichain:<version>`** variant is based on [`bitnami/minideb`].
+The `tilkal/multichain:<version>` variant is based on [`bitnami/minideb`].<br>
 Supported tags: [`latest`] [`1.0-beta-2`]
 
-The **`tilkal/multichain:<version>-nanoserver`** variant is based on [`microsoft/nanoserver`].
+The `tilkal/multichain:<version>-nanoserver` variant is based on [`microsoft/nanoserver`].<br>
 Supported tags: [`latest-nanoserver`] [`1.0-beta-2-nanoserver`]
 
 
