@@ -1,3 +1,15 @@
+# Image Variants
+
+The [`tilkal/multichain`](https://store.docker.com/community/images/tilkal/multichain) images come in two variants.
+
+## `tilkal/multichain:<version>`
+
+This variant is based on [`bitnami/minideb`](https://store.docker.com/community/images/bitnami/minideb).
+
+## `tilkal/multichain:<version>-nanoserver`
+
+This variant is based on [`microsoft/nanoserver`](https://store.docker.com/images/nanoserver).
+
 # License
 
 `Dockerfile` license information:
