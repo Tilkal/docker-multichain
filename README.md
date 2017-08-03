@@ -50,7 +50,7 @@ Portions copyright many others - see individual files
 
 
 [`bitnami/minideb`]: https://store.docker.com/community/images/bitnami/minideb
-[`gcr.io/distroless/base`]: https://console.cloud.google.com/gcr/images/distroless/GLOBAL/base
+[`gcr.io/distroless/base`]: https://github.com/GoogleCloudPlatform/distroless/blob/master/base/README.md
 [`microsoft/nanoserver`]: https://store.docker.com/images/nanoserver
 [`tilkal/multichain`]: https://store.docker.com/community/images/tilkal/multichain
 
