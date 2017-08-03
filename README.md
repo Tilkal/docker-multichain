@@ -15,7 +15,7 @@ The [`tilkal/multichain`] images come in three flavors:
 
 # Usage
 
-*Note:* For the distroless-based image, executable path must start from the root (e.g. `/multichain-util`).
+*Note:* For the distroless-based image, path of executables must start from the root (e.g. `/multichain-util`).
 
 **Creating a blockchain named `testchain`**
 
