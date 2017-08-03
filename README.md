@@ -1,27 +1,37 @@
 # Docker Images for MultiChain
 
-The [`tilkal/multichain`] images come in two flavors:
+The [`tilkal/multichain`] images come in three flavors:
 * [`latest`], [`1.0-beta-2`] based on [`bitnami/minideb`].
+* (experimental) [`latest-distroless`], [`1.0-beta-2-distroless`] based on [`gcr.io/distroless/base`].
 * [`latest-nanoserver`], [`1.0-beta-2-nanoserver`] based on [`microsoft/nanoserver`].
+
+
+# Volume
+
+* `/root/.multichain` for the minideb-based image.
+* `/home/.multichain` for the distroless-based image.
+* `C:/Users/ContainerAdministrator/AppData/Roaming/MultiChain` for the Nano Server-based image.
 
 
 # Usage
 
+*Note:* For the distroless-based image, executable path must start from the root (e.g. `/multichain-util`).
+
 **Creating a blockchain named `testchain`**
 
-`docker run --rm -v node1-data:/root/.multichain --entrypoint multichain-util tilkal/multichain create testchain`
+`docker run --rm -v node1-data:<volume> --entrypoint multichain-util tilkal/multichain create testchain`
 
 **Starting a node of a blockchain named `testchain`**
 
-`docker run -v node1-data:/root/.multichain tilkal/multichain testchain`
+`docker run -v node1-data:<volume> tilkal/multichain testchain`
 
 **Adding a node to an existing blockchain named `testchain`**
 
-`docker run --rm -v node2-data:/root/.multichain tilkal/multichain testchain@<address>:<port>`
+`docker run --rm -v node2-data:<volume> tilkal/multichain testchain@<node1-host>:<node1-port>`
 
 **Granting access to a node added to a blockchain named `testchain` from a running node**
 
-`docker exec <container> multichain-cli testchain grant <address> connect,send,receive`
+`docker exec <node1-container> multichain-cli testchain grant <node2-address> connect,send,receive`
 
 
 # License
@@ -40,14 +50,18 @@ Portions copyright many others - see individual files
 
 
 [`bitnami/minideb`]: https://store.docker.com/community/images/bitnami/minideb
+[`gcr.io/distroless/base`]: https://console.cloud.google.com/gcr/images/distroless/GLOBAL/base
 [`microsoft/nanoserver`]: https://store.docker.com/images/nanoserver
 [`tilkal/multichain`]: https://store.docker.com/community/images/tilkal/multichain
 
 [`latest`]: https://github.com/Tilkal/docker-multichain/blob/master/1.0/minideb/Dockerfile
-[`1.0-beta-2`]: https://github.com/Tilkal/docker-multichain/blob/0177cba2606466810be3806dc14e25a65ec4809d/1.0/minideb/Dockerfile
+[`1.0-beta-2`]: https://github.com/Tilkal/docker-multichain/blob/c83c276e6f7241e019df755cda93f8efaabf6059/1.0/minideb/Dockerfile
+
+[`latest-distroless`]: https://github.com/Tilkal/docker-multichain/blob/master/1.0/distroless/Dockerfile
+[`1.0-beta-2-distroless`]: https://github.com/Tilkal/docker-multichain/blob/c83c276e6f7241e019df755cda93f8efaabf6059/1.0/distroless/Dockerfile
 
 [`latest-nanoserver`]: https://github.com/Tilkal/docker-multichain/blob/master/1.0/nanoserver/Dockerfile
-[`1.0-beta-2-nanoserver`]: https://github.com/Tilkal/docker-multichain/blob/0177cba2606466810be3806dc14e25a65ec4809d/1.0/nanoserver/Dockerfile
+[`1.0-beta-2-nanoserver`]: https://github.com/Tilkal/docker-multichain/blob/c83c276e6f7241e019df755cda93f8efaabf6059/1.0/nanoserver/Dockerfile
 
 [`MIT License`]: https://github.com/Tilkal/docker-multichain/blob/master/LICENSE
 [`GPLv3`]: https://github.com/MultiChain/multichain/blob/master/COPYING
