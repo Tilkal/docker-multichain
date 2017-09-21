@@ -1,10 +1,23 @@
 # Docker Images for MultiChain
 
-The [`tilkal/multichain`] images come in three flavors:
-* [`latest`], [`1.0`], [`1.0-beta-2`] based on [`bitnami/minideb`].
-* [`latest-distroless`], [`1.0-distroless`], [`1.0-beta-2-distroless`] based on [`gcr.io/distroless/base`] (experimental).
-* [`latest-nanoserver`], [`1.0-nanoserver`], [`1.0-beta-2-nanoserver`] based on [`microsoft/nanoserver`].
+The [`tilkal/multichain`] images come in three flavors.
 
+**[`bitnami/minideb`]-based images**
+* [`latest`]
+* [`1.0.1`]
+* [`1.0`]
+
+**[`gcr.io/distroless/base`]-based images (experimental)**
+* [`latest-distroless`]
+* [`1.0.1-distroless`]
+* [`1.0-distroless`]
+
+**[`microsoft/nanoserver`]-based images**
+* [`latest-nanoserver`]
+* [`1.0.1-nanoserver`]
+* [`1.0-nanoserver`]
+
+You can also consult all [available tags].
 
 # Volume
 
@@ -55,16 +68,18 @@ Portions copyright many others - see individual files
 [`tilkal/multichain`]: https://store.docker.com/community/images/tilkal/multichain
 
 [`latest`]: https://github.com/Tilkal/docker-multichain/blob/master/1.0/minideb/Dockerfile
+[`1.0.1`]: https://github.com/Tilkal/docker-multichain/blob/4af0a9d7eb7e9765558869f7076e5e088dbfa96a/1.0/minideb/Dockerfile
 [`1.0`]: https://github.com/Tilkal/docker-multichain/blob/c0bb7a216225f11c0631a507709c9d2ba4e34017/1.0/minideb/Dockerfile
-[`1.0-beta-2`]: https://github.com/Tilkal/docker-multichain/blob/c83c276e6f7241e019df755cda93f8efaabf6059/1.0/minideb/Dockerfile
 
 [`latest-distroless`]: https://github.com/Tilkal/docker-multichain/blob/master/1.0/distroless/Dockerfile
+[`1.0.1-distroless`]: https://github.com/Tilkal/docker-multichain/blob/4af0a9d7eb7e9765558869f7076e5e088dbfa96a/1.0/distroless/Dockerfile
 [`1.0-distroless`]: https://github.com/Tilkal/docker-multichain/blob/c0bb7a216225f11c0631a507709c9d2ba4e34017/1.0/distroless/Dockerfile
-[`1.0-beta-2-distroless`]: https://github.com/Tilkal/docker-multichain/blob/c83c276e6f7241e019df755cda93f8efaabf6059/1.0/distroless/Dockerfile
 
 [`latest-nanoserver`]: https://github.com/Tilkal/docker-multichain/blob/master/1.0/nanoserver/Dockerfile
+[`1.0.1-nanoserver`]: https://github.com/Tilkal/docker-multichain/blob/4af0a9d7eb7e9765558869f7076e5e088dbfa96a/1.0/nanoserver/Dockerfile
 [`1.0-nanoserver`]: https://github.com/Tilkal/docker-multichain/blob/c0bb7a216225f11c0631a507709c9d2ba4e34017/1.0/nanoserver/Dockerfile
-[`1.0-beta-2-nanoserver`]: https://github.com/Tilkal/docker-multichain/blob/c83c276e6f7241e019df755cda93f8efaabf6059/1.0/nanoserver/Dockerfile
+
+[available tags]: https://store.docker.com/community/images/tilkal/multichain/tags
 
 [`MIT License`]: https://github.com/Tilkal/docker-multichain/blob/master/LICENSE
 [`GPLv3`]: https://github.com/MultiChain/multichain/blob/master/COPYING
