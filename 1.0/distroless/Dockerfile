@@ -1,11 +1,11 @@
 FROM bitnami/minideb as minideb
 
-ENV MULTICHAIN_VERSION 1.0
+ENV MULTICHAIN_VERSION 1.0.1
 
-ADD https://www.multichain.com/download/multichain-${MULTICHAIN_VERSION}-release.tar.gz /tmp
+ADD https://www.multichain.com/download/multichain-${MULTICHAIN_VERSION}.tar.gz /tmp
 
-RUN tar --extract --gzip --file /tmp/multichain-${MULTICHAIN_VERSION}-release.tar.gz --directory /usr/local/bin --exclude=README.txt --strip-components=1 \
-    && rm /tmp/multichain-${MULTICHAIN_VERSION}-release.tar.gz
+RUN tar --extract --gzip --file /tmp/multichain-${MULTICHAIN_VERSION}.tar.gz --directory /usr/local/bin --exclude=README.txt --strip-components=1 \
+    && rm /tmp/multichain-${MULTICHAIN_VERSION}.tar.gz
 
 FROM gcr.io/distroless/base
 
