@@ -1,34 +1,32 @@
 # Docker Images for MultiChain
 
-The [`tilkal/multichain`] images come in three flavors.
+The [`tilkal/multichain`] images (see all [available tags]) come in three flavors:
 
-**[`bitnami/minideb`]-based images**
-* [`latest`]
-* [`1.0.1`]
-* [`1.0`]
+1. **[`bitnami/minideb`]-based images**
+    * [`latest`]
+    * [`1.0.1`]
+    * [`1.0`]
 
-**[`gcr.io/distroless/base`]-based images (experimental)**
-* [`latest-distroless`]
-* [`1.0.1-distroless`]
-* [`1.0-distroless`]
+2. **[`gcr.io/distroless/base`]-based images (experimental)**
+    * [`latest-distroless`]
+    * [`1.0.1-distroless`]
+    * [`1.0-distroless`]
 
-**[`microsoft/nanoserver`]-based images**
-* [`latest-nanoserver`]
-* [`1.0.1-nanoserver`]
-* [`1.0-nanoserver`]
-
-You can also consult all [available tags].
+3. **[`microsoft/nanoserver`]-based images**
+    * [`latest-nanoserver`]
+    * [`1.0.1-nanoserver`]
+    * [`1.0-nanoserver`]
 
 # Volume
 
-* `/root/.multichain` for the minideb-based image.
-* `/home/.multichain` for the distroless-based image.
-* `C:/Users/ContainerAdministrator/AppData/Roaming/MultiChain` for the Nano Server-based image.
+* `/root/.multichain` for the minideb-based images.
+* `/home/.multichain` for the distroless-based images.
+* `C:/Users/ContainerAdministrator/AppData/Roaming/MultiChain` for the Nano Server-based images.
 
 
 # Usage
 
-*Note:* For the distroless-based image, path of executables must start from the root (e.g. `/multichain-util`).
+*Note:* For the distroless-based images, path of executables must start from the root (e.g. `/multichain-util`).
 
 **Creating a blockchain named `testchain`**
 
@@ -51,13 +49,13 @@ You can also consult all [available tags].
 
 **`Dockerfile` license information:**
 
-Copyright (c) 2017 Tilkal SAS [`MIT License`]
+Copyright © 2017 Tilkal SAS [`MIT License`]
 
 **MultiChain license information:**
 
-Copyright (c) 2014-2017 Coin Sciences Ltd [`GPLv3`](https://github.com/MultiChain/multichain/blob/master/COPYING)
+Copyright © 2014-2017 Coin Sciences Ltd [`GPLv3`](https://github.com/MultiChain/multichain/blob/master/COPYING)
 
-Portions copyright (c) 2009-2016 The Bitcoin Core developers
+Portions copyright © 2009-2016 The Bitcoin Core developers
 
 Portions copyright many others - see individual files
 
@@ -66,6 +64,7 @@ Portions copyright many others - see individual files
 [`gcr.io/distroless/base`]: https://github.com/GoogleCloudPlatform/distroless/blob/master/base/README.md
 [`microsoft/nanoserver`]: https://store.docker.com/images/nanoserver
 [`tilkal/multichain`]: https://store.docker.com/community/images/tilkal/multichain
+[available tags]: https://store.docker.com/community/images/tilkal/multichain/tags
 
 [`latest`]: https://github.com/Tilkal/docker-multichain/blob/master/1.0/minideb/Dockerfile
 [`1.0.1`]: https://github.com/Tilkal/docker-multichain/blob/4af0a9d7eb7e9765558869f7076e5e088dbfa96a/1.0/minideb/Dockerfile
@@ -78,8 +77,6 @@ Portions copyright many others - see individual files
 [`latest-nanoserver`]: https://github.com/Tilkal/docker-multichain/blob/master/1.0/nanoserver/Dockerfile
 [`1.0.1-nanoserver`]: https://github.com/Tilkal/docker-multichain/blob/4af0a9d7eb7e9765558869f7076e5e088dbfa96a/1.0/nanoserver/Dockerfile
 [`1.0-nanoserver`]: https://github.com/Tilkal/docker-multichain/blob/c0bb7a216225f11c0631a507709c9d2ba4e34017/1.0/nanoserver/Dockerfile
-
-[available tags]: https://store.docker.com/community/images/tilkal/multichain/tags
 
 [`MIT License`]: https://github.com/Tilkal/docker-multichain/blob/master/LICENSE
 [`GPLv3`]: https://github.com/MultiChain/multichain/blob/master/COPYING
