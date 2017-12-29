@@ -1,6 +1,6 @@
 FROM bitnami/minideb
 
-ENV MULTICHAIN_VERSION 1.0.1
+ENV MULTICHAIN_VERSION 1.0.2
 
 ADD https://www.multichain.com/download/multichain-${MULTICHAIN_VERSION}.tar.gz /tmp
 
