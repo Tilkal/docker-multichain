@@ -1,16 +1,11 @@
 # Docker Images for MultiChain
 
-The [`tilkal/multichain`] images (see all [available tags]) come in three flavors:
+The [`tilkal/multichain`] images (see all [available tags]) come in two flavors:
 
 1. **[`bitnami/minideb`]-based images**
     * [`latest`]
     * [`1.0.1`]
     * [`1.0`]
-
-2. **[`gcr.io/distroless/base`]-based images (experimental)**
-    * [`latest-distroless`]
-    * [`1.0.1-distroless`]
-    * [`1.0-distroless`]
 
 3. **[`microsoft/nanoserver`]-based images**
     * [`latest-nanoserver`]
@@ -20,13 +15,10 @@ The [`tilkal/multichain`] images (see all [available tags]) come in three flavor
 # Volume
 
 * `/root/.multichain` for the minideb-based images.
-* `/home/.multichain` for the distroless-based images.
 * `C:/Users/ContainerAdministrator/AppData/Roaming/MultiChain` for the Nano Server-based images.
 
 
 # Usage
-
-*Note:* For the distroless-based images, path of executables must start from the root (e.g. `/multichain-util`).
 
 **Creating a blockchain named `testchain`**
 
@@ -61,7 +53,6 @@ Portions copyright many others - see individual files
 
 
 [`bitnami/minideb`]: https://store.docker.com/community/images/bitnami/minideb
-[`gcr.io/distroless/base`]: https://github.com/GoogleCloudPlatform/distroless/blob/master/base/README.md
 [`microsoft/nanoserver`]: https://store.docker.com/images/nanoserver
 [`tilkal/multichain`]: https://store.docker.com/community/images/tilkal/multichain
 [available tags]: https://store.docker.com/community/images/tilkal/multichain/tags
@@ -69,10 +60,6 @@ Portions copyright many others - see individual files
 [`latest`]: https://github.com/Tilkal/docker-multichain/blob/master/1.0/minideb/Dockerfile
 [`1.0.1`]: https://github.com/Tilkal/docker-multichain/blob/4af0a9d7eb7e9765558869f7076e5e088dbfa96a/1.0/minideb/Dockerfile
 [`1.0`]: https://github.com/Tilkal/docker-multichain/blob/c0bb7a216225f11c0631a507709c9d2ba4e34017/1.0/minideb/Dockerfile
-
-[`latest-distroless`]: https://github.com/Tilkal/docker-multichain/blob/master/1.0/distroless/Dockerfile
-[`1.0.1-distroless`]: https://github.com/Tilkal/docker-multichain/blob/4af0a9d7eb7e9765558869f7076e5e088dbfa96a/1.0/distroless/Dockerfile
-[`1.0-distroless`]: https://github.com/Tilkal/docker-multichain/blob/c0bb7a216225f11c0631a507709c9d2ba4e34017/1.0/distroless/Dockerfile
 
 [`latest-nanoserver`]: https://github.com/Tilkal/docker-multichain/blob/master/1.0/nanoserver/Dockerfile
 [`1.0.1-nanoserver`]: https://github.com/Tilkal/docker-multichain/blob/4af0a9d7eb7e9765558869f7076e5e088dbfa96a/1.0/nanoserver/Dockerfile
