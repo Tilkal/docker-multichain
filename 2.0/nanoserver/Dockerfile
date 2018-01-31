@@ -1,6 +1,6 @@
 FROM microsoft/nanoserver
 
-ENV MULTICHAIN_VERSION 2.0-alpha-1
+ENV MULTICHAIN_VERSION 2.0-alpha-2
 
 SHELL ["powershell", "-Command", "$ErrorActionPreference = 'Stop';"]
 
