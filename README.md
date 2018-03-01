@@ -4,11 +4,11 @@ The [`tilkal/multichain`] images (see all [available tags]) come in two flavors:
 
 1. **[`bitnami/minideb`]-based images**
     * [`2.0-alpha-2`]
-    * [`latest`], `1.0.3`
+    * [`latest`], `1.0.4`
 
 2. **[`microsoft/nanoserver`]-based images**
     * [`2.0-alpha-2-nanoserver`]
-    * [`latest-nanoserver`], `1.0.3-nanoserver`
+    * [`latest-nanoserver`], `1.0.4-nanoserver`
 
 
 # Volume
